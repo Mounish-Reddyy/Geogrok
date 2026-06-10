@@ -4,13 +4,9 @@ https://github.com/Mounish-Reddyy/Geogrok.git#
 A simple and interactive geography quiz application built using **HTML, CSS, and JavaScript**.  
 This project tests users’ knowledge of world geography through timed multiple-choice questions with scoring and instant feedback.
 
----
-
-## 🚀 Live Demo
-https://github.com/Mounish-Reddyy/Geogrok.git#
 
 
----
+
 
 ## 🎯 How It Works
 
@@ -22,7 +18,6 @@ https://github.com/Mounish-Reddyy/Geogrok.git#
 6. View final score at the end
 7. Restart or quit the quiz
 
----
 
 ## 🧠 Scoring System
 
@@ -30,7 +25,6 @@ https://github.com/Mounish-Reddyy/Geogrok.git#
 - ❌ Wrong Answer → -1 point  
 - ⏱️ Timeout → Auto marks correct answer and moves forward  
 
----
 
 ## 💡 Key Learnings
 
@@ -41,13 +35,8 @@ This project helps understand:
 - Dynamic HTML rendering
 - State management in frontend apps
 
----
 
-## 📸 UI Preview
 
-*(Add screenshot here)*
-
----
 
 ## 🔧 Future Improvements
 
