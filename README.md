@@ -52,8 +52,12 @@ This project helps understand:
 
 - Developed by: **Sai Mounish**
 - GitHub: https://github.com/Mounish-Reddyy
+- 
 ---
 
 ## 📜 License
+This project is based on an open-source quiz application originally created by Sudeep Acharjee on GitHub.
+Original repository:
+https://github.com/sudeep-acharjee
 
 This project is open-source and free to use for learning purposes.
