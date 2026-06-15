@@ -1,6 +1,6 @@
 **GeoGrok Quiz** is a premium, framework-free web application designed to challenge and expand your global IQ. Test your knowledge across four distinct categories with a completely dynamic, responsive, and beautifully animated interface.
 
-🖥️ **[Live Demo](YOUR_GITHUB_PAGES_LINK_HERE)** *(Replace with your GitHub Pages link once deployed)*
+🖥️ **[Live Demo]https://geole.netlify.app/
 
 ---
 
