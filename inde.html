@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGrok Quiz - Challenge Your World Knowledge</title>
+    <link rel="stylesheet" href="sert.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-blur circles-1"></div>
+    <div class="bg-blur circles-2"></div>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">GeoGrok<span>Quiz</span></div>
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </header>
+
+        <main class="main-card">
+            <section id="home-screen" class="screen active">
+                <div class="welcome-text">
+                    <h1>Expand Your Global IQ</h1>
+                    <p>Select a category and size to test your expertise on world affairs.</p>
+                </div>
+
+                <div class="setup-section">
+                    <h3>1. Select Category</h3>
+                    <div class="category-grid" id="category-grid">
+                        <div class="card category-card active" data-category="geography">
+                            <div class="card-icon">🌍</div>
+                            <h4>Geography</h4>
+                        </div>
+                        <div class="card category-card" data-category="history">
+                            <div class="card-icon">📜</div>
+                            <h4>History</h4>
+                        </div>
+                        <div class="card category-card" data-category="politics">
+                            <div class="card-icon">🏛️</div>
+                            <h4>Politics</h4>
+                        </div>
+                        <div class="card category-card" data-category="international_affairs">
+                            <div class="card-icon">🤝</div>
+                            <h4>Intl. Affairs</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setup-section">
+                    <h3>2. Select Quiz Size</h3>
+                    <div class="size-flex" id="size-container">
+                        <button class="size-btn active" data-size="5">5 Qs</button>
+                        <button class="size-btn" data-size="10">10 Qs</button>
+                        <button class="size-btn" data-size="12">12 Qs</button>
+                        <button class="size-btn" data-size="15">15 Qs</button>
+                    </div>
+                </div>
+
+                <button id="start-btn" class="btn btn-primary cta-btn">Launch Quiz</button>
+
+                <div class="leaderboard-section">
+                    <h3>🏆 Global Top 5 Leaderboard</h3>
+                    <ul id="leaderboard-list" class="leaderboard-list">
+                        </ul>
+                </div>
+            </section>
+
+            <section id="quiz-screen" class="screen">
+                <div class="quiz-header">
+                    <div class="quiz-info">
+                        <span id="question-counter">Question 1 of 10</span>
+                        <span id="category-badge" class="badge">Geography</span>
+                    </div>
+                    <div class="timer-container">
+                        <svg class="timer-svg" viewBox="0 0 36 36">
+                            <path class="timer-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path id="timer-progress" class="timer-progress" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <span id="timer-text">15</span>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container">
+                    <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                </div>
+
+                <div class="question-container">
+                    <h2 id="question-text">Loading question content...</h2>
+                </div>
+
+                <div id="options-container" class="options-grid">
+                    </div>
+
+                <div class="quiz-footer">
+                    <button id="next-btn" class="btn btn-secondary" disabled>Next Question</button>
+                </div>
+            </section>
+
+            <section id="results-screen" class="screen">
+                <div class="results-summary">
+                    <div class="result-icon-wrap">
+                        <span id="result-emoji" class="result-emoji">🎓</span>
+                    </div>
+                    <h2 id="performance-message">Excellent Job!</h2>
+                    <p class="sub-msg">Here is how you performed overall:</p>
+                </div>
+
+                <div class="score-display">
+                    <span id="final-percentage" class="big-score">0%</span>
+                    <span id="final-score-text">You scored 0 out of 0 points</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card correct">
+                        <span class="stat-num" id="stat-correct">0</span>
+                        <span class="stat-label">Correct</span>
+                    </div>
+                    <div class="stat-card incorrect">
+                        <span class="stat-num" id="stat-incorrect">0</span>
+                        <span class="stat-label">Incorrect</span>
+                    </div>
+                </div>
+
+                <div id="leaderboard-entry" class="leaderboard-entry">
+                    <h3>Save Your Score</h3>
+                    <div class="input-group">
+                        <input type="text" id="player-name" placeholder="Enter your name" maxlength="15">
+                        <button id="save-score-btn" class="btn btn-secondary">Submit</button>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="retry-btn" class="btn btn-primary">Play Again</button>
+                    <button id="home-btn" class="btn btn-secondary">Return Home</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
